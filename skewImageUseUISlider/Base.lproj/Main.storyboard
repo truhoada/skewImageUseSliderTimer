@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MUpear" translatesAutoresizingMaskIntoConstraints="NO" id="del-xM-31F">
+                                <rect key="frame" x="58" y="75" width="204" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="VwI-Po-OBv"/>
+                                    <constraint firstAttribute="width" constant="204" id="YPG-jZ-WX6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUo-xM-bMK">
+                                <rect key="frame" x="70" y="403" width="181" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Hen-Hp-bSP"/>
+                                    <constraint firstAttribute="width" constant="181" id="R8g-HI-6Lg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Stop/Start Timer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnStopTimer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uFX-fA-uWz"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jrc-wk-Qqt">
+                                <rect key="frame" x="56" y="315" width="208" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="Q7O-45-o02"/>
+                                    <constraint firstAttribute="height" constant="30" id="mew-Z1-OyM"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="1" green="0.058707638479999998" blue="0.20709640230000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.36772838899999999" green="0.98484204070000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="valueSliderChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cYr-fy-Tnr"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.7297785725" blue="0.65693177619999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="mUo-xM-bMK" secondAttribute="centerX" id="5Yq-6c-M6q"/>
+                            <constraint firstItem="del-xM-31F" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="55" id="Ejx-Ba-h4s"/>
+                            <constraint firstItem="mUo-xM-bMK" firstAttribute="top" secondItem="jrc-wk-Qqt" secondAttribute="bottom" constant="58" id="OJr-v5-uP3"/>
+                            <constraint firstItem="jrc-wk-Qqt" firstAttribute="top" secondItem="del-xM-31F" secondAttribute="bottom" constant="98" id="T5I-Jv-TUB"/>
+                            <constraint firstAttribute="centerX" secondItem="jrc-wk-Qqt" secondAttribute="centerX" id="gg6-xa-g2Q"/>
+                            <constraint firstAttribute="centerX" secondItem="del-xM-31F" secondAttribute="centerX" id="mMp-Vo-DXS"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imgMUPear" destination="del-xM-31F" id="BIH-IR-pc2"/>
+                        <outlet property="slider" destination="jrc-wk-Qqt" id="Bum-AM-TIq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95" y="293"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MUpear" width="960" height="643"/>
+    </resources>
+</document>
